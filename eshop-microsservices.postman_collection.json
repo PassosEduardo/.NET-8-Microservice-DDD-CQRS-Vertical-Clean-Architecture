@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "9c6b38cb-9085-4803-9131-05eccd46c4ba",
+		"name": "eshop-microsservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22670817"
+	},
+	"item": [
+		{
+			"name": "GetAllProducts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5050/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\r\n            \"name\": \"new product2\",\r\n            \"category\": [\r\n                \"c1\",\r\n                \"c2\"\r\n            ],\r\n            \"description\": \"Test\",\r\n            \"imageFile\": \"image\",\r\n            \"price\": 5.99\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5050/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductsById",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5050/products/01948bc5-06f3-444a-b478-f7c9c1e0c607",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"products",
+						"01948bc5-06f3-444a-b478-f7c9c1e0c607"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetProductsByCategory",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5050/products/category/c1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"products",
+						"category",
+						"c1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Products",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "        {\r\n            \"id\": \"01948bc5-06f3-444a-b478-f7c9c1e0c607\",\r\n            \"name\": \"product2\",\r\n            \"category\": [\r\n                \"c1\",\r\n                \"c2\"\r\n            ],\r\n            \"description\": \"Test\",\r\n            \"imageFile\": \"image\",\r\n            \"price\": 5.99\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5050/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
