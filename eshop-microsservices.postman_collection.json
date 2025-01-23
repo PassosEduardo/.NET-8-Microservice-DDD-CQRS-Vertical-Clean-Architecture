@@ -7,132 +7,225 @@
 	},
 	"item": [
 		{
-			"name": "GetAllProducts",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://localhost:5050/products",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "5050",
-					"path": [
-						"products"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Post Products",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "        {\r\n            \"name\": \"new product2\",\r\n            \"category\": [\r\n                \"c1\",\r\n                \"c2\"\r\n            ],\r\n            \"description\": \"Test\",\r\n            \"imageFile\": \"image\",\r\n            \"price\": 5.99\r\n        }",
-					"options": {
-						"raw": {
-							"language": "json"
+			"name": "Products",
+			"item": [
+				{
+					"name": "GetAllProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5050/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"products"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "https://localhost:5050/products",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "5050",
-					"path": [
-						"products"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GetProductsById",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://localhost:5050/products/01948bc5-06f3-444a-b478-f7c9c1e0c607",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "5050",
-					"path": [
-						"products",
-						"01948bc5-06f3-444a-b478-f7c9c1e0c607"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GetProductsByCategory",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "https://localhost:5050/products/category/c1",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "5050",
-					"path": [
-						"products",
-						"category",
-						"c1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Put Products",
-			"request": {
-				"auth": {
-					"type": "noauth"
-				},
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "        {\r\n            \"id\": \"01948bc5-06f3-444a-b478-f7c9c1e0c607\",\r\n            \"name\": \"product2\",\r\n            \"category\": [\r\n                \"c1\",\r\n                \"c2\"\r\n            ],\r\n            \"description\": \"Test\",\r\n            \"imageFile\": \"image\",\r\n            \"price\": 5.99\r\n        }",
-					"options": {
-						"raw": {
-							"language": "json"
+				{
+					"name": "Post Products",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"name\": \"product2\",\r\n            \"category\": [\r\n                \"c1\",\r\n                \"c2\"\r\n            ],\r\n            \"description\": \"Test\",\r\n            \"imageFile\": \"image\",\r\n            \"price\": 5.99\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5050/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"products"
+							]
 						}
-					}
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "https://localhost:5050/products",
-					"protocol": "https",
-					"host": [
-						"localhost"
-					],
-					"port": "5050",
-					"path": [
-						"products"
-					]
+				{
+					"name": "GetProductsById",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5050/products/01948bc5-06f3-444a-b478-f7c9c1e0c607",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"products",
+								"01948bc5-06f3-444a-b478-f7c9c1e0c607"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetProductsByCategory",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5050/products/category/c1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"products",
+								"category",
+								"c1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Products",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"id\": \"01948bc5-06f3-444a-b478-f7c9c1e0c607\",\r\n            \"name\": \"product2\",\r\n            \"category\": [\r\n                \"c1\",\r\n                \"c2\"\r\n            ],\r\n            \"description\": \"Test\",\r\n            \"imageFile\": \"image\",\r\n            \"price\": 5.99\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5050/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteProducts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\r\n            \"id\": \"01948bc5-06f3-444a-b478-f7c9c1e0c607\",\r\n            \"name\": \"product2\",\r\n            \"category\": [\r\n                \"c1\",\r\n                \"c2\"\r\n            ],\r\n            \"description\": \"Test\",\r\n            \"imageFile\": \"image\",\r\n            \"price\": 5.99\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5050/products/01948bc5-06f3-444a-b478-f7c9c1e0c609",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5050",
+							"path": [
+								"products",
+								"01948bc5-06f3-444a-b478-f7c9c1e0c609"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "Basket",
+			"item": [
+				{
+					"name": "StoreBasket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"cart\":   {\r\n        \"userName\" : \"user1\",\r\n        \"items\": [{\r\n            \"quantity\": 5,\r\n            \"color\": \"black\",\r\n            \"price\": 5.21,\r\n            \"productId\" : \"01948b1c-adbd-4bd0-b477-7822db4af585\",\r\n            \"productName\": \"product1\"\r\n        }]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5051/basket",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5051",
+							"path": [
+								"basket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get basket",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5051/basket/dudufu",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5051",
+							"path": [
+								"basket",
+								"dudufu"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
