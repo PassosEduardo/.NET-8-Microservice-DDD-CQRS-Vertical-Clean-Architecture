@@ -1,9 +1,9 @@
 ﻿
-using Catalog.API.Products.CreateProduct;
-
 namespace Catalog.API.Products.GetProductById;
 
+//public record GetProductByIdRequest();
 public record GetProductByIdResponse(Product Product);
+
 public class GetProductByIdEndpoint : ICarterModule
 {
     public void AddRoutes(IEndpointRouteBuilder app)
@@ -16,11 +16,10 @@ public class GetProductByIdEndpoint : ICarterModule
 
             return Results.Ok(response);
         })
-        .WithName("GetProductsById")
-        .Produces<CreateProductResponse>(StatusCodes.Status200OK)
+        .WithName("GetProductById")
+        .Produces<GetProductByIdResponse>(StatusCodes.Status200OK)
         .ProducesProblem(StatusCodes.Status400BadRequest)
-        .WithSummary("Get Products")
-        .WithDescription("Get Product");
+        .WithSummary("Get Product By Id")
+        .WithDescription("Get Product By Id");
     }
 }
-
