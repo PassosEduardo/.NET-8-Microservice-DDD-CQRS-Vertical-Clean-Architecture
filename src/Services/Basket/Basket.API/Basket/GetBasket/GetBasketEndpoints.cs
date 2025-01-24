@@ -15,10 +15,10 @@ public class GetBasketEndpoints : ICarterModule
 
             return Results.Ok(respose);
         })
-        .WithName("Getbasket")
+        .WithName("GetProductById")
         .Produces<GetBasketResponse>(StatusCodes.Status200OK)
         .ProducesProblem(StatusCodes.Status400BadRequest)
-        .WithSummary("Getbasket")
-        .WithDescription("Getbasket");
+        .WithSummary("Get Product By Id")
+        .WithDescription("Get Product By Id");
     }
 }
